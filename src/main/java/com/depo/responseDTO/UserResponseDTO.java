@@ -1,9 +1,11 @@
 package com.depo.responseDTO;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+
 import com.depo.domain.Role;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,9 +29,9 @@ public class UserResponseDTO {
 
 	private byte status;
 
-	private LocalDateTime create_at;
+	private LocalDate create_at;
 
-	private LocalDateTime update_at;
+	private LocalDate update_at;
 		
 	private Set<String> roles;
 	

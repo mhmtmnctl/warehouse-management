@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 
-		loadData();
+		//loadData();
 	}
 
 	public DataLoader(@Lazy PasswordEncoder passwordEncoder) {
