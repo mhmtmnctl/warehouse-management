@@ -8,6 +8,12 @@ public class ErrorMessage {
 	public static final String NOT_PERMITTED_METHOD_MESSAGE = "You don't have any permission to change this data";
 		
 	public static final String CATEGORY_NOT_FOUND_MESSAGE = "Category not found";
+	
+	public final static String JWTTOKEN_ERROR_MESSAGE = "JWT Token Validation Error";
+	
+	public final static String USER_NOT_FOUND_MESSAGE = "User with email  not found";
+	
+	public static final String ROLE_NOT_FOUND_MESSAGE = "Role not found";
 
 	
 	
