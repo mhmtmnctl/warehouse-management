@@ -36,7 +36,7 @@ public class SecurityConfig {
 				.antMatchers("/user/login",
 						     "/user/register",
 						     "/actuator/info",
-						     "actuator/health")
+						     "/actuator/health")
 				.permitAll().anyRequest().authenticated();
 		http.addFilterBefore(authTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 		return http.build();

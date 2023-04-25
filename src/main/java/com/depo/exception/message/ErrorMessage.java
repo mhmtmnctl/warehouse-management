@@ -16,6 +16,8 @@ public class ErrorMessage {
 	public static final String ROLE_NOT_FOUND_MESSAGE = "Role not found";
 	
 	public final static String EMAIL_ALREADY_EXIST_MESSAGE = "Email already exists";
+	
+	public static final String BUILTIN_MESSAGE = "Access denied for any changes(built-in)";
 
 	
 	

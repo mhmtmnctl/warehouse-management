@@ -32,6 +32,8 @@ public class UserResponseDTO {
 	private LocalDate create_at;
 
 	private LocalDate update_at;
+	
+	private Boolean built_in;
 		
 	private Set<String> roles;
 	
