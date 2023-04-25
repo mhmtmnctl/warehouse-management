@@ -20,10 +20,10 @@ import io.jsonwebtoken.UnsupportedJwtException;
 public class JwtUtils {
 
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);	
-	@Value("${gamingProM.app.jwtSecret}")
+	@Value("${depo.app.jwtSecret}")
 	private String jwtSecret;
 	
-	@Value("${gamingProM.app.jwtExpirationMs}")
+	@Value("${depo.app.jwtExpirationMs}")
 	private Long jwtExpirationMs;	
 	
 	public String generateJwtToken(UserDetails userDetails) {

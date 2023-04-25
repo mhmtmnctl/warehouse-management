@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 
-		//loadData();
+		loadData();
 	}
 
 	public DataLoader(@Lazy PasswordEncoder passwordEncoder) {
@@ -48,7 +48,7 @@ public class DataLoader implements ApplicationRunner {
 	
 
 		Role role2 = new Role();
-		role2.setId(3);
+		role2.setId(2);
 		role2.setType(RoleType.ROLE_CUSTOMER);
 		roleRepository.save(role2);
 
@@ -84,8 +84,9 @@ public class DataLoader implements ApplicationRunner {
 		customer.setPhone("555-555-5555");		
 		customer.setEmail("customer@warehouse.com");
 		customer.setStatus((byte) 1);
+		customer.setCreate_at(LocalDate.now());
 		customer.setRoles(roles2);
-		customer.setBuilt_in(true);
+		customer.setBuilt_in(false);
 		String encodedPassword2 = passwordEncoder.encode("12345");
 		customer.setPassword(encodedPassword2);
 

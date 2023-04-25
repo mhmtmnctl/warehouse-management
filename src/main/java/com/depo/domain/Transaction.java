@@ -1,6 +1,8 @@
 package com.depo.domain;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -39,6 +41,6 @@ public class Transaction {
 
 	@OneToMany
 	@JoinColumn(name = "depo_id")
-	private Depo depo;
+	private List<Depo> depo;
 
 }

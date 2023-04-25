@@ -10,7 +10,7 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/warehouse
-    username: postgres
+    username: depocu
     password: 12345
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -29,7 +29,7 @@ logging:
   level:
     '[org.springframework.web]': warn
     '[org.hibernate]': info
-    '[com.gaming]': debug
+    '[com.depo]': debug
     '[org.springframework.boot.autoconfigure]': error
     root: off
 

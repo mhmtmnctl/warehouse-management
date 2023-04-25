@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.depo.domain.Depo;
 
 @Repository
-public interface DepoRepository extends JpaRepository<Long, Depo>{
+public interface DepoRepository extends JpaRepository<Depo, Long>{
 
 }
