@@ -10628,3 +10628,188 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation "tbl_role" does no
 2023-04-25 14:05:51,662 INFO  [RMI TCP Connection(5)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
 2023-04-25 14:05:51,662 DEBUG [RMI TCP Connection(5)-127.0.0.1] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
 2023-04-25 14:05:51,662 DEBUG [RMI TCP Connection(5)-127.0.0.1] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fe2abbb, started on Tue Apr 25 14:05:18 TRT 2023
+2023-04-25 20:43:27,809 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 3212 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-04-25 20:43:27,811 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-04-25 20:43:27,812 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-04-25 20:43:27,813 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-04-25 20:43:27,883 DEBUG [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls:Matching URLs for reloading : [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-04-25 20:43:27,884 DEBUG [restartedMain] org.springframework.boot.devtools.settings.DevToolsSettings:Included patterns for restart : []
+2023-04-25 20:43:27,884 DEBUG [restartedMain] org.springframework.boot.devtools.settings.DevToolsSettings:Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2023-04-25 20:43:27,884 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-25 20:43:27,885 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-25 20:43:27,886 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c71102b
+2023-04-25 20:43:29,606 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:43:29,607 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:43:29,608 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-04-25 20:43:29,694 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-04-25 20:43:29,805 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-04-25 20:43:29,805 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1919 ms
+2023-04-25 20:43:30,007 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 20:43:30,061 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-25 20:43:30,248 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-25 20:43:30,564 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-25 20:43:31,470 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 20:43:31,837 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-04-25 20:43:31,837 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-04-25 20:43:31,858 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-04-25 20:43:31,858 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-04-25 20:43:31,883 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-04-25 20:43:31,883 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-04-25 20:43:31,883 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-04-25 20:43:31,884 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-04-25 20:43:31,884 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-04-25 20:43:32,395 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-04-25 20:43:32,590 DEBUG [restartedMain] org.springframework.boot.devtools.livereload.LiveReloadServer:Starting live reload server on port 35729
+2023-04-25 20:43:32,591 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-04-25 20:43:32,628 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-25 20:43:32,640 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 5.441 seconds (JVM running for 6.276)
+2023-04-25 20:43:32,641 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-04-25 20:43:32,642 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Creating new Restarter for thread Thread[main,5,main]
+2023-04-25 20:43:32,642 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Immediately restarting application
+2023-04-25 20:43:32,642 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-04-25 20:43:32,643 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-04-25 20:48:11,234 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-25 20:48:11,234 DEBUG [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Change set: %s[C:\Users\mehme\Documents\workspace1\depo\target\classes [C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\controller\UserController.class (MODIFY)]]
+2023-04-25 20:48:11,235 DEBUG [File Watcher] org.springframework.boot.devtools.restart.Restarter:Restarting application
+2023-04-25 20:48:11,235 DEBUG [Thread-5] org.springframework.boot.devtools.restart.Restarter:Stopping application
+2023-04-25 20:48:11,235 DEBUG [Thread-5] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-04-25 20:48:11,236 DEBUG [Thread-5] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c71102b, started on Tue Apr 25 20:43:27 TRT 2023
+2023-04-25 20:48:11,299 DEBUG [Thread-5] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@62cbbff
+2023-04-25 20:48:11,299 DEBUG [Thread-5] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-04-25 20:48:11,346 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 3212 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-04-25 20:48:11,346 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-04-25 20:48:11,346 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-04-25 20:48:11,346 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-04-25 20:48:11,349 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@32f36aa6
+2023-04-25 20:48:11,752 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:48:11,752 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:48:11,752 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-04-25 20:48:11,760 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-04-25 20:48:11,790 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-04-25 20:48:11,790 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 441 ms
+2023-04-25 20:48:11,849 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 20:48:11,915 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-25 20:48:12,187 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 20:48:12,344 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-04-25 20:48:12,344 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-04-25 20:48:12,363 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-04-25 20:48:12,363 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-04-25 20:48:12,364 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-04-25 20:48:12,364 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-04-25 20:48:12,365 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-04-25 20:48:12,366 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-04-25 20:48:12,366 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-04-25 20:48:12,630 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-04-25 20:48:12,803 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-04-25 20:48:12,823 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-25 20:48:12,829 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 1.522 seconds (JVM running for 286.465)
+2023-04-25 20:48:12,829 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-04-25 20:48:12,831 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-04-25 20:48:12,831 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-04-25 20:48:15,283 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-04-25 20:48:15,283 DEBUG [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Change set: %s[C:\Users\mehme\Documents\workspace1\depo\target\classes [C:\Users\mehme\Documents\workspace1\depo\target\classes\META-INF\MANIFEST.MF (MODIFY), C:\Users\mehme\Documents\workspace1\depo\target\classes\META-INF\maven\com.depo\depo\pom.properties (MODIFY), C:\Users\mehme\Documents\workspace1\depo\target\classes\META-INF\maven\com.depo\depo\pom.xml (MODIFY)]]
+2023-04-25 20:48:15,284 DEBUG [File Watcher] org.springframework.boot.devtools.restart.Restarter:Restarting application
+2023-04-25 20:48:15,284 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Stopping application
+2023-04-25 20:48:15,284 DEBUG [Thread-7] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-04-25 20:48:15,284 DEBUG [Thread-7] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@32f36aa6, started on Tue Apr 25 20:48:11 TRT 2023
+2023-04-25 20:48:15,354 DEBUG [Thread-7] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1ac09c88
+2023-04-25 20:48:15,354 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-04-25 20:48:15,388 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 3212 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-04-25 20:48:15,388 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-04-25 20:48:15,388 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-04-25 20:48:15,388 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-04-25 20:48:15,390 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c101bf9
+2023-04-25 20:48:15,676 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:48:15,676 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:48:15,676 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-04-25 20:48:15,685 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-04-25 20:48:15,706 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-04-25 20:48:15,707 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 317 ms
+2023-04-25 20:48:15,752 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 20:48:15,925 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-25 20:48:16,120 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 20:48:16,242 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-04-25 20:48:16,243 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-04-25 20:48:16,256 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-04-25 20:48:16,256 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-04-25 20:48:16,257 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-04-25 20:48:16,257 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-04-25 20:48:16,257 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-04-25 20:48:16,258 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-04-25 20:48:16,258 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-04-25 20:48:16,447 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-04-25 20:48:16,590 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-04-25 20:48:16,602 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-25 20:48:16,606 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 1.246 seconds (JVM running for 290.243)
+2023-04-25 20:48:16,606 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-04-25 20:48:16,607 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-04-25 20:48:16,607 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-04-25 20:48:32,153 ERROR [http-nio-8081-exec-2] com.depo.security.jwt.JwtUtils:JWT Token Validation Error
+2023-04-25 20:49:09,554 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-04-25 20:49:09,554 DEBUG [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Change set: %s[C:\Users\mehme\Documents\workspace1\depo\target\classes [C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\security\SecurityConfig$1.class (MODIFY), C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\security\SecurityConfig$2.class (MODIFY), C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\security\SecurityConfig.class (MODIFY)]]
+2023-04-25 20:49:09,554 DEBUG [File Watcher] org.springframework.boot.devtools.restart.Restarter:Restarting application
+2023-04-25 20:49:09,555 DEBUG [Thread-11] org.springframework.boot.devtools.restart.Restarter:Stopping application
+2023-04-25 20:49:09,555 DEBUG [Thread-11] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-04-25 20:49:09,555 DEBUG [Thread-11] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c101bf9, started on Tue Apr 25 20:48:15 TRT 2023
+2023-04-25 20:49:09,608 DEBUG [Thread-11] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@a4c62a0
+2023-04-25 20:49:09,608 DEBUG [Thread-11] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-04-25 20:49:09,642 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 3212 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-04-25 20:49:09,642 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-04-25 20:49:09,642 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-04-25 20:49:09,642 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-04-25 20:49:09,644 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@83c9c78
+2023-04-25 20:49:09,922 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:49:09,922 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-04-25 20:49:09,922 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-04-25 20:49:09,931 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-04-25 20:49:09,952 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-04-25 20:49:09,952 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 308 ms
+2023-04-25 20:49:10,000 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-25 20:49:10,061 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-25 20:49:10,218 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-25 20:49:10,336 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-04-25 20:49:10,336 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-04-25 20:49:10,347 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-04-25 20:49:10,347 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-04-25 20:49:10,348 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-04-25 20:49:10,348 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-04-25 20:49:10,348 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-04-25 20:49:10,349 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-04-25 20:49:10,349 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-04-25 20:49:10,527 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-04-25 20:49:10,652 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-04-25 20:49:10,665 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-25 20:49:10,669 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 1.057 seconds (JVM running for 344.306)
+2023-04-25 20:49:10,670 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-04-25 20:49:10,670 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-04-25 20:49:10,671 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-04-25 20:49:13,792 ERROR [http-nio-8081-exec-2] com.depo.security.jwt.JwtUtils:JWT Token Validation Error
+2023-04-25 20:49:13,989 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        user0_.id as col_0_0_ 
+    from
+        tbl_user user0_ 
+    where
+        user0_.email=? limit ?
+2023-04-25 20:49:14,001 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        role0_.id as id1_3_,
+        role0_.type as type2_3_ 
+    from
+        tbl_role role0_ 
+    where
+        role0_.type=?
+2023-04-25 20:49:14,128 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    insert 
+    into
+        tbl_user
+        (built_in, create_at, email, first_name, last_name, password, phone, status, update_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-04-25 20:49:14,144 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    insert 
+    into
+        tbl_user_role
+        (user_id, role_id) 
+    values
+        (?, ?)
