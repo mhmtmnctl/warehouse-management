@@ -53,4 +53,5 @@ public class UserController {
 		LoginResponseDTO loginResponse = new LoginResponseDTO(jwtToken);
 		return new ResponseEntity<>(loginResponse, HttpStatus.OK);
 	}
+	
 }
