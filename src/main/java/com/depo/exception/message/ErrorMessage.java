@@ -19,6 +19,8 @@ public class ErrorMessage {
 	
 	public static final String BUILTIN_MESSAGE = "Access denied for any changes(built-in)";
 
+	public static final String DEPO_NOT_FOUND_MESSAGE = "Depo not found";
+
 	
 	
 

@@ -67,14 +67,7 @@ public class CategoryService {
 		return categoryResponseDTO;
 	}
 
-	// Find Category Method
-	public Category getCategoryMethod(Long categoryId) {
-
-		Category category = categoryRepository.findById(categoryId)
-				.orElseThrow(() -> new ResourceNotFoundException(ErrorMessage.CATEGORY_NOT_FOUND_MESSAGE));
-		return category;
-
-	}
+	
 
 	// DELETE CATEGORY
 	public CategoryResponseDTO deleteCategory(Long categoryId) {
@@ -92,5 +85,14 @@ public class CategoryService {
 
 		return categoryResponseDTO;
 	}
+	
+	// Find Category Method
+		public Category getCategoryMethod(Long categoryId) {
+
+			Category category = categoryRepository.findById(categoryId)
+					.orElseThrow(() -> new ResourceNotFoundException(ErrorMessage.CATEGORY_NOT_FOUND_MESSAGE));
+			return category;
+
+		}
 
 }
