@@ -1,0 +1,47 @@
+{"properties": [
+  {
+    "name": "depo.app.jwt-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'depo.app.jwt-secret'"
+  },
+  {
+    "name": "depo.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'depo.app.jwtExpirationMs'"
+  },
+  {
+    "name": "info.application.name",
+    "type": "java.lang.String",
+    "description": "A description for 'info.application.name'"
+  },
+  {
+    "name": "info.application.description",
+    "type": "java.lang.String",
+    "description": "A description for 'info.application.description'"
+  },
+  {
+    "name": "info.application.version",
+    "type": "java.lang.String",
+    "description": "A description for 'info.application.version'"
+  },
+  {
+    "name": "management.endpoint.health.show-details",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoint.health.show-details'"
+  },
+  {
+    "name": "management.endpoints.web.exposure.include",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoints.web.exposure.include'"
+  },
+  {
+    "name": "management.info.env.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'management.info.env.enabled'"
+  },
+  {
+    "name": "management.endpoint.shutdown.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoint.shutdown.enabled'"
+  }
+]}
