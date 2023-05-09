@@ -4,6 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import com.depo.domain.Product;
 import com.depo.requestDTO.ProductRequestDTO;
+import com.depo.responseDTO.ProductResponseDTO;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
@@ -14,5 +15,12 @@ public interface ProductMapper {
 	@Mapping(target="category", ignore=true)
 	@Mapping(target="depo", ignore=true)
 	Product productRequsetDTOToProduct(ProductRequestDTO productRequestDTO );
+	
+	
+	@Mapping(target="categoryTitle", ignore=true)
+	@Mapping(target="depoCity", ignore=true)
+	@Mapping(target="depoState", ignore=true)
+	@Mapping(target="depoTitle", ignore=true)
+	ProductResponseDTO productToProductResponseDTO(Product product);
 
 }

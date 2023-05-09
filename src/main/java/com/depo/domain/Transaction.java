@@ -1,7 +1,6 @@
 package com.depo.domain;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,14 +32,14 @@ public class Transaction {
 	private String transaction;
 
 	@Column
-	private LocalDateTime create_at;
+	private LocalDate create_at;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id")
 	private Category category;
 
-	@OneToMany
-	@JoinColumn(name = "depo_id")
-	private List<Depo> depo;
+//	@ManyToOne
+//	@JoinColumn(name = "depo_id")
+//	private Depo depo;
 
 }

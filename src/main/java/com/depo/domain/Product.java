@@ -51,12 +51,12 @@ public class Product {
 	@Column
 	private LocalDate update_at;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
-	
+
 	@OneToMany
-	@JoinColumn(name = "depo_id")
+	@JoinColumn(name = "product_id")
 	private List<Depo> depo;
 
 }

@@ -4,6 +4,10 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,12 +23,26 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
+	
+	//CREATE PRODUCT
+	@PostMapping("/create")
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<ProductResponseDTO> createProduct(@Valid @RequestBody ProductRequestDTO productRequestDTO){
 		
 		ProductResponseDTO productResponseDTO = productService.createProduct(productRequestDTO);
 		
 		return ResponseEntity.ok(productResponseDTO);
 		
+	}
+	
+	//GET PRODUCT BY ID
+	@GetMapping("/get/{id}")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('CUSTOMER')")
+	public ResponseEntity<ProductResponseDTO> getProduct(@PathVariable("id") Long productId){
+		
+		ProductResponseDTO productResponseDTO = productService.getProduct(productId);
+		
+		return ResponseEntity.ok(productResponseDTO);
 	}
 
 }

@@ -21,6 +21,8 @@ public class ErrorMessage {
 
 	public static final String DEPO_NOT_FOUND_MESSAGE = "Depo not found";
 
+	public static final String PRODUCT_NOT_FOUND_MESSAGE = "Product not found with given id";
+
 	
 	
 

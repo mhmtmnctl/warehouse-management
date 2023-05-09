@@ -1,5 +1,7 @@
 package com.depo.requestDTO;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,6 @@ public class ProductRequestDTO {
 
 	private Long categoryId;
 
-	private Long depoId;
+	private List<Long> depoIds;
 
 }

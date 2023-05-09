@@ -1,6 +1,8 @@
 package com.depo.responseDTO;
 
 import java.time.LocalDate;
+import java.util.List;
+
 import com.depo.enums.DepoEnums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,9 +33,9 @@ public class ProductResponseDTO {
 
 	private String categoryTitle;
 
-	private String depoTitle;
+	private List<String>  depoTitle;
 
-	private String depoCity;
+	private List<String>  depoCity;
 
-	private DepoEnums depoState;
+	private List<String>  depoState;
 }
