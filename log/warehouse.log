@@ -3299,3 +3299,1577 @@ Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "
         tbl_depo depo0_ 
     where
         depo0_.product_id=?
+2023-05-09 16:41:56,640 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 16:41:56,644 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 16:41:56,646 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    select
+        depo0_.product_id as product10_1_0_,
+        depo0_.id as id1_1_0_,
+        depo0_.id as id1_1_1_,
+        depo0_.address as address2_1_1_,
+        depo0_.built_in as built_in3_1_1_,
+        depo0_.city as city4_1_1_,
+        depo0_.create_at as create_a5_1_1_,
+        depo0_.state as state6_1_1_,
+        depo0_.status as status7_1_1_,
+        depo0_.title as title8_1_1_,
+        depo0_.update_at as update_a9_1_1_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.product_id=?
+2023-05-09 16:43:59,181 INFO  [RMI TCP Connection(7)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
+2023-05-09 16:43:59,181 DEBUG [RMI TCP Connection(7)-127.0.0.1] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-05-09 16:43:59,182 DEBUG [RMI TCP Connection(7)-127.0.0.1] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3d2a74f3, started on Tue May 09 16:40:08 TRT 2023
+2023-05-09 21:11:46,582 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 13096 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:11:46,583 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:11:46,583 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:11:46,584 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:11:46,642 DEBUG [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls:Matching URLs for reloading : [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:11:46,642 DEBUG [restartedMain] org.springframework.boot.devtools.settings.DevToolsSettings:Included patterns for restart : []
+2023-05-09 21:11:46,642 DEBUG [restartedMain] org.springframework.boot.devtools.settings.DevToolsSettings:Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2023-05-09 21:11:46,642 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-09 21:11:46,642 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-09 21:11:46,643 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@fb991b2
+2023-05-09 21:11:48,173 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:11:48,174 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:11:48,174 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:11:48,237 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:11:48,330 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:11:48,330 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1687 ms
+2023-05-09 21:11:48,488 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:11:48,539 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-05-09 21:11:48,744 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-09 21:11:49,082 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:11:50,051 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:11:50,422 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:11:50,423 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:11:50,442 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:11:50,443 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:11:50,470 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:11:50,471 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:11:50,471 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:11:50,472 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:11:50,472 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:11:51,168 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-05-09 21:11:51,307 DEBUG [restartedMain] org.springframework.boot.devtools.livereload.LiveReloadServer:Starting live reload server on port 35729
+2023-05-09 21:11:51,309 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-05-09 21:11:51,355 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-09 21:11:51,366 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 5.251 seconds (JVM running for 6.124)
+2023-05-09 21:11:51,367 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-05-09 21:11:51,368 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Creating new Restarter for thread Thread[main,5,main]
+2023-05-09 21:11:51,369 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Immediately restarting application
+2023-05-09 21:11:51,369 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:11:51,370 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-05-09 21:12:31,680 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:12:31,756 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:12:31,766 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    select
+        depo0_.product_id as product10_1_0_,
+        depo0_.id as id1_1_0_,
+        depo0_.id as id1_1_1_,
+        depo0_.address as address2_1_1_,
+        depo0_.built_in as built_in3_1_1_,
+        depo0_.city as city4_1_1_,
+        depo0_.create_at as create_a5_1_1_,
+        depo0_.state as state6_1_1_,
+        depo0_.status as status7_1_1_,
+        depo0_.title as title8_1_1_,
+        depo0_.update_at as update_a9_1_1_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.product_id=?
+2023-05-09 21:13:23,635 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:13:23,670 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:13:23,673 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        depo0_.id as id1_1_0_,
+        depo0_.address as address2_1_0_,
+        depo0_.built_in as built_in3_1_0_,
+        depo0_.city as city4_1_0_,
+        depo0_.create_at as create_a5_1_0_,
+        depo0_.state as state6_1_0_,
+        depo0_.status as status7_1_0_,
+        depo0_.title as title8_1_0_,
+        depo0_.update_at as update_a9_1_0_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.id=?
+2023-05-09 21:13:23,709 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    update
+        tbl_product 
+    set
+        built_in=?,
+        category_id=?,
+        create_at=?,
+        status=?,
+        stock_alarm_limit=?,
+        stock_amount=?,
+        title=?,
+        update_at=? 
+    where
+        id=?
+2023-05-09 21:13:23,714 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=null 
+    where
+        product_id=?
+2023-05-09 21:13:23,716 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=? 
+    where
+        id=?
+2023-05-09 21:13:23,728 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    insert 
+    into
+        tbl_transaction
+        (category_id, create_at, transaction) 
+    values
+        (?, ?, ?)
+2023-05-09 21:14:32,540 INFO  [RMI TCP Connection(6)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
+2023-05-09 21:14:32,540 DEBUG [RMI TCP Connection(6)-127.0.0.1] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-05-09 21:14:32,540 DEBUG [RMI TCP Connection(6)-127.0.0.1] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@fb991b2, started on Tue May 09 21:11:46 TRT 2023
+2023-05-09 21:22:39,709 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:22:39,710 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:22:39,711 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:22:39,711 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:22:39,755 DEBUG [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls:Matching URLs for reloading : [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:22:39,755 DEBUG [restartedMain] org.springframework.boot.devtools.settings.DevToolsSettings:Included patterns for restart : []
+2023-05-09 21:22:39,755 DEBUG [restartedMain] org.springframework.boot.devtools.settings.DevToolsSettings:Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2023-05-09 21:22:39,755 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-09 21:22:39,755 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-09 21:22:39,756 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@568963df
+2023-05-09 21:22:41,044 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:22:41,045 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:22:41,045 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:22:41,108 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:22:41,208 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:22:41,208 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1452 ms
+2023-05-09 21:22:41,369 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:22:41,417 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-05-09 21:22:41,567 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-09 21:22:41,859 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:22:42,685 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:22:43,052 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:22:43,052 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:22:43,071 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:22:43,071 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:22:43,094 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:22:43,094 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:22:43,095 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:22:43,095 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:22:43,095 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:22:43,719 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-05-09 21:22:43,850 DEBUG [restartedMain] org.springframework.boot.devtools.livereload.LiveReloadServer:Starting live reload server on port 35729
+2023-05-09 21:22:43,852 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-05-09 21:22:43,893 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-09 21:22:43,904 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 4.57 seconds (JVM running for 5.311)
+2023-05-09 21:22:43,905 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-05-09 21:22:43,907 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Creating new Restarter for thread Thread[main,5,main]
+2023-05-09 21:22:43,907 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Immediately restarting application
+2023-05-09 21:22:43,907 DEBUG [restartedMain] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:22:43,907 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-05-09 21:23:25,168 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:23:25,294 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    select
+        depo0_.id as id1_1_0_,
+        depo0_.address as address2_1_0_,
+        depo0_.built_in as built_in3_1_0_,
+        depo0_.city as city4_1_0_,
+        depo0_.create_at as create_a5_1_0_,
+        depo0_.state as state6_1_0_,
+        depo0_.status as status7_1_0_,
+        depo0_.title as title8_1_0_,
+        depo0_.update_at as update_a9_1_0_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.id=?
+2023-05-09 21:23:25,303 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    select
+        category0_.id as id1_0_0_,
+        category0_.built_in as built_in2_0_0_,
+        category0_.create_at as create_a3_0_0_,
+        category0_.status as status4_0_0_,
+        category0_.title as title5_0_0_,
+        category0_.update_at as update_a6_0_0_ 
+    from
+        tbl_category category0_ 
+    where
+        category0_.id=?
+2023-05-09 21:23:25,329 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    insert 
+    into
+        tbl_product
+        (built_in, category_id, create_at, status, stock_alarm_limit, stock_amount, title, update_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-05-09 21:23:25,346 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=? 
+    where
+        id=?
+2023-05-09 21:23:25,353 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL:
+    insert 
+    into
+        tbl_transaction
+        (category_id, create_at, transaction) 
+    values
+        (?, ?, ?)
+2023-05-09 21:23:30,101 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:23:30,107 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:23:30,112 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=null 
+    where
+        product_id=?
+2023-05-09 21:23:30,114 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    delete 
+    from
+        tbl_product 
+    where
+        id=?
+2023-05-09 21:28:54,522 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-09 21:28:54,522 DEBUG [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Change set: %s[C:\Users\mehme\Documents\workspace1\depo\target\classes [C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\service\ProductService.class (MODIFY)]]
+2023-05-09 21:28:54,523 DEBUG [File Watcher] org.springframework.boot.devtools.restart.Restarter:Restarting application
+2023-05-09 21:28:54,523 DEBUG [Thread-5] org.springframework.boot.devtools.restart.Restarter:Stopping application
+2023-05-09 21:28:54,524 DEBUG [Thread-5] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-05-09 21:28:54,524 DEBUG [Thread-5] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@568963df, started on Tue May 09 21:22:39 TRT 2023
+2023-05-09 21:28:54,594 DEBUG [Thread-5] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@610e4464
+2023-05-09 21:28:54,595 DEBUG [Thread-5] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:28:54,643 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:28:54,643 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:28:54,643 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:28:54,643 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:28:54,646 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3aa08820
+2023-05-09 21:28:54,994 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:28:54,995 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:28:54,995 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:28:55,002 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:28:55,029 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:28:55,029 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 383 ms
+2023-05-09 21:28:55,086 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:28:55,178 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:28:55,405 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:28:55,540 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:28:55,540 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:28:55,555 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:28:55,555 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:28:55,556 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:28:55,556 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:28:55,556 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:28:55,557 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:28:55,557 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:28:55,890 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-05-09 21:28:55,942 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-05-09 21:28:55,957 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-09 21:28:55,961 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 1.356 seconds (JVM running for 377.368)
+2023-05-09 21:28:55,962 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-05-09 21:28:55,963 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-05-09 21:28:55,963 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-05-09 21:29:06,648 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-09 21:29:06,649 DEBUG [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Change set: %s[C:\Users\mehme\Documents\workspace1\depo\target\classes [C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\repository\ProductRepository.class (MODIFY)]]
+2023-05-09 21:29:06,649 DEBUG [File Watcher] org.springframework.boot.devtools.restart.Restarter:Restarting application
+2023-05-09 21:29:06,649 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Stopping application
+2023-05-09 21:29:06,649 DEBUG [Thread-7] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-05-09 21:29:06,649 DEBUG [Thread-7] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3aa08820, started on Tue May 09 21:28:54 TRT 2023
+2023-05-09 21:29:06,711 DEBUG [Thread-7] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@55e64337
+2023-05-09 21:29:06,711 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:29:06,750 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:29:06,750 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:29:06,750 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:29:06,750 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:29:06,752 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13704e01
+2023-05-09 21:29:07,053 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:07,053 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:07,054 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:29:07,061 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:29:07,085 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:29:07,085 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 333 ms
+2023-05-09 21:29:07,136 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:29:07,222 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:29:07,399 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:29:07,510 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:29:07,511 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:29:07,522 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:29:07,522 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:29:07,523 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:29:07,523 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:29:07,523 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:29:07,524 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:29:07,524 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:29:07,610 WARN  [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+2023-05-09 21:29:07,714 ERROR [restartedMain] org.springframework.boot.SpringApplication:Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.depo.DepoApplication.main(DepoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.6.jar:2.7.6]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 39 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:107) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:95) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1061) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:97) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:87) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:87) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:365) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 49 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:119) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:259) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:93) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:103) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	... 71 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:91) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:438) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:414) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:448) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:471) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:471) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:414) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:367) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:349) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:332) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:384) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:385) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	... 75 common frames omitted
+2023-05-09 21:29:20,478 DEBUG [Thread-7] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3616a60e
+2023-05-09 21:29:20,479 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:29:20,513 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:29:20,514 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:29:20,514 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:29:20,514 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:29:20,516 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a2a934c
+2023-05-09 21:29:20,816 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:20,816 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:20,816 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:29:20,823 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:29:20,848 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:29:20,848 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 332 ms
+2023-05-09 21:29:20,896 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:29:21,085 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:29:21,252 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:29:21,356 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:29:21,357 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:29:21,368 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:29:21,368 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:29:21,368 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:29:21,369 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:29:21,369 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:29:21,369 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:29:21,369 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:29:21,447 WARN  [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+2023-05-09 21:29:21,466 ERROR [restartedMain] org.springframework.boot.SpringApplication:Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.depo.DepoApplication.main(DepoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.6.jar:2.7.6]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 39 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:107) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:95) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1061) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:97) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:87) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:87) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:365) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 49 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)! No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:119) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:259) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:93) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:103) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	... 71 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'withCategories' found for type 'Long' Traversed path: Product.id.
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:91) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:438) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:414) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:448) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:471) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:471) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:414) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:367) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:349) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:332) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:384) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:385) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	... 75 common frames omitted
+2023-05-09 21:29:26,008 DEBUG [Thread-7] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@30789355
+2023-05-09 21:29:26,008 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:29:26,043 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:29:26,043 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:29:26,043 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:29:26,043 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:29:26,045 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c33fc3
+2023-05-09 21:29:26,347 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:26,347 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:26,347 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:29:26,356 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:29:26,395 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:29:26,395 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 350 ms
+2023-05-09 21:29:26,444 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:29:26,527 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:29:26,687 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:29:26,802 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:29:26,802 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:29:26,814 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:29:26,814 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:29:26,815 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:29:26,815 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:29:26,815 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:29:26,815 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:29:26,816 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:29:26,939 WARN  [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!
+2023-05-09 21:29:27,003 ERROR [restartedMain] org.springframework.boot.SpringApplication:Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.depo.DepoApplication.main(DepoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.6.jar:2.7.6]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.depo.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 39 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long); Reason: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:107) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:95) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1061) ~[na:na]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:97) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:87) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:87) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:365) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 49 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract com.depo.domain.Product com.depo.repository.ProductRepository.findByIdWithCategories(java.lang.Long)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:96) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:66) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:51) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:169) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:253) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:93) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:103) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	... 71 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: categories of: com.depo.domain.Product [SELECT p FROM com.depo.domain.Product p LEFT JOIN FETCH p.categories WHERE p.id = :id]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:757) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.24.jar:5.3.24]
+	at jdk.proxy8/jdk.proxy8.$Proxy175.createQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:90) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	... 77 common frames omitted
+Caused by: org.hibernate.QueryException: could not resolve property: categories of: com.depo.domain.Product [SELECT p FROM com.depo.domain.Product p LEFT JOIN FETCH p.categories WHERE p.id = :id]
+	at org.hibernate.QueryException.generateQueryException(QueryException.java:120) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 85 common frames omitted
+Caused by: org.hibernate.QueryException: could not resolve property: categories of: com.depo.domain.Product
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:78) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:72) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:2053) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:412) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:524) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:723) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:268) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:208) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:109) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromJoinElement(HqlSqlWalker.java:411) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.joinElement(HqlSqlBaseWalker.java:4007) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3793) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3671) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:746) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:602) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:339) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:287) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 91 common frames omitted
+2023-05-09 21:29:51,076 DEBUG [Thread-7] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@11bb6ecb
+2023-05-09 21:29:51,076 DEBUG [Thread-7] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:29:51,110 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:29:51,110 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:29:51,110 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:29:51,110 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:29:51,112 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a439150
+2023-05-09 21:29:51,401 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:51,401 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:29:51,403 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:29:51,408 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:29:51,432 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:29:51,432 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 321 ms
+2023-05-09 21:29:51,479 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:29:51,559 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:29:51,717 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:29:51,822 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:29:51,823 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:29:51,834 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:29:51,834 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:29:51,835 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:29:51,835 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:29:51,835 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:29:51,835 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:29:51,835 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:29:52,129 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-05-09 21:29:52,172 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-05-09 21:29:52,189 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-09 21:29:52,192 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 1.11 seconds (JVM running for 433.599)
+2023-05-09 21:29:52,193 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-05-09 21:29:52,195 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-05-09 21:29:52,195 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-05-09 21:30:03,425 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:30:03,438 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        category1_.id as id1_0_1_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:31:01,748 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:31:01,755 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL:
+    select
+        depo0_.id as id1_1_0_,
+        depo0_.address as address2_1_0_,
+        depo0_.built_in as built_in3_1_0_,
+        depo0_.city as city4_1_0_,
+        depo0_.create_at as create_a5_1_0_,
+        depo0_.state as state6_1_0_,
+        depo0_.status as status7_1_0_,
+        depo0_.title as title8_1_0_,
+        depo0_.update_at as update_a9_1_0_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.id=?
+2023-05-09 21:31:01,759 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL:
+    select
+        category0_.id as id1_0_0_,
+        category0_.built_in as built_in2_0_0_,
+        category0_.create_at as create_a3_0_0_,
+        category0_.status as status4_0_0_,
+        category0_.title as title5_0_0_,
+        category0_.update_at as update_a6_0_0_ 
+    from
+        tbl_category category0_ 
+    where
+        category0_.id=?
+2023-05-09 21:31:01,763 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL:
+    insert 
+    into
+        tbl_product
+        (built_in, category_id, create_at, status, stock_alarm_limit, stock_amount, title, update_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-05-09 21:31:01,765 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=? 
+    where
+        id=?
+2023-05-09 21:31:01,770 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL:
+    insert 
+    into
+        tbl_transaction
+        (category_id, create_at, transaction) 
+    values
+        (?, ?, ?)
+2023-05-09 21:31:07,824 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:31:07,827 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        category1_.id as id1_0_1_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:31:07,829 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=null 
+    where
+        product_id=?
+2023-05-09 21:31:07,830 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL:
+    delete 
+    from
+        tbl_product 
+    where
+        id=?
+2023-05-09 21:31:20,734 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:31:20,738 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    select
+        depo0_.id as id1_1_0_,
+        depo0_.address as address2_1_0_,
+        depo0_.built_in as built_in3_1_0_,
+        depo0_.city as city4_1_0_,
+        depo0_.create_at as create_a5_1_0_,
+        depo0_.state as state6_1_0_,
+        depo0_.status as status7_1_0_,
+        depo0_.title as title8_1_0_,
+        depo0_.update_at as update_a9_1_0_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.id=?
+2023-05-09 21:31:20,740 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    select
+        category0_.id as id1_0_0_,
+        category0_.built_in as built_in2_0_0_,
+        category0_.create_at as create_a3_0_0_,
+        category0_.status as status4_0_0_,
+        category0_.title as title5_0_0_,
+        category0_.update_at as update_a6_0_0_ 
+    from
+        tbl_category category0_ 
+    where
+        category0_.id=?
+2023-05-09 21:31:20,742 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    insert 
+    into
+        tbl_product
+        (built_in, category_id, create_at, status, stock_alarm_limit, stock_amount, title, update_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-05-09 21:31:20,743 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=? 
+    where
+        id=?
+2023-05-09 21:31:20,745 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL:
+    insert 
+    into
+        tbl_transaction
+        (category_id, create_at, transaction) 
+    values
+        (?, ?, ?)
+2023-05-09 21:31:52,658 DEBUG [http-nio-8081-exec-8] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:31:52,661 DEBUG [http-nio-8081-exec-8] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        category1_.id as id1_0_1_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:32:24,139 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:32:24,141 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        category1_.id as id1_0_1_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:32:24,143 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=null 
+    where
+        product_id=?
+2023-05-09 21:32:24,143 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL:
+    delete 
+    from
+        tbl_product 
+    where
+        id=?
+2023-05-09 21:32:47,797 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-09 21:32:47,798 DEBUG [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Change set: %s[C:\Users\mehme\Documents\workspace1\depo\target\classes [C:\Users\mehme\Documents\workspace1\depo\target\classes\com\depo\service\ProductService.class (MODIFY)]]
+2023-05-09 21:32:47,798 DEBUG [File Watcher] org.springframework.boot.devtools.restart.Restarter:Restarting application
+2023-05-09 21:32:47,798 DEBUG [Thread-11] org.springframework.boot.devtools.restart.Restarter:Stopping application
+2023-05-09 21:32:47,798 DEBUG [Thread-11] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-05-09 21:32:47,798 DEBUG [Thread-11] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a439150, started on Tue May 09 21:29:51 TRT 2023
+2023-05-09 21:32:47,858 DEBUG [Thread-11] org.springframework.boot.devtools.restart.classloader.RestartClassLoader:Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b0c4b4
+2023-05-09 21:32:47,858 DEBUG [Thread-11] org.springframework.boot.devtools.restart.Restarter:Starting application com.depo.DepoApplication with URLs [file:/C:/Users/mehme/Documents/workspace1/depo/target/classes/]
+2023-05-09 21:32:47,892 INFO  [restartedMain] com.depo.DepoApplication:Starting DepoApplication using Java 17.0.4 on emin with PID 14736 (C:\Users\mehme\Documents\workspace1\depo\target\classes started by emin in C:\Users\mehme\Documents\workspace1\depo)
+2023-05-09 21:32:47,892 DEBUG [restartedMain] com.depo.DepoApplication:Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-05-09 21:32:47,892 INFO  [restartedMain] com.depo.DepoApplication:No active profile set, falling back to 1 default profile: "default"
+2023-05-09 21:32:47,892 DEBUG [restartedMain] org.springframework.boot.SpringApplication:Loading source class com.depo.DepoApplication
+2023-05-09 21:32:47,895 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2dc4e07d
+2023-05-09 21:32:48,200 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:32:48,201 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:Code archive: C:\Users\mehme\.m2\repository\org\springframework\boot\spring-boot\2.7.6\spring-boot-2.7.6.jar
+2023-05-09 21:32:48,201 DEBUG [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory:None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2023-05-09 21:32:48,207 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8081 (http)
+2023-05-09 21:32:48,234 DEBUG [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2023-05-09 21:32:48,234 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 339 ms
+2023-05-09 21:32:48,293 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-09 21:32:48,483 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-09 21:32:48,643 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-09 21:32:48,753 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtSecret' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type String
+2023-05-09 21:32:48,753 DEBUG [restartedMain] org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver:Found key 'depo.app.jwtExpirationMs' in PropertySource 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'' with value of type Integer
+2023-05-09 21:32:48,767 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping filters: springSecurityFilterChain urls=[/*] order=-100, filterRegistrationBean urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authTokenFilter urls=[/*] order=2147483647
+2023-05-09 21:32:48,767 DEBUG [restartedMain] org.springframework.boot.web.servlet.ServletContextInitializerBeans:Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2023-05-09 21:32:48,768 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter:Filter 'requestContextFilter' configured for use
+2023-05-09 21:32:48,768 DEBUG [restartedMain] com.depo.security.jwt.AuthTokenFilter:Filter 'authTokenFilter' configured for use
+2023-05-09 21:32:48,768 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter:Filter 'characterEncodingFilter' configured for use
+2023-05-09 21:32:48,768 DEBUG [restartedMain] org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1:Filter 'springSecurityFilterChain' configured for use
+2023-05-09 21:32:48,768 DEBUG [restartedMain] org.springframework.boot.web.servlet.filter.OrderedFormContentFilter:Filter 'formContentFilter' configured for use
+2023-05-09 21:32:49,076 DEBUG [restartedMain] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2023-05-09 21:32:49,125 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-05-09 21:32:49,143 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-09 21:32:49,147 INFO  [restartedMain] com.depo.DepoApplication:Started DepoApplication in 1.283 seconds (JVM running for 610.553)
+2023-05-09 21:32:49,147 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state LivenessState changed to CORRECT
+2023-05-09 21:32:49,148 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-05-09 21:32:49,148 DEBUG [restartedMain] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-05-09 21:32:54,029 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:32:54,042 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        depo0_.id as id1_1_0_,
+        depo0_.address as address2_1_0_,
+        depo0_.built_in as built_in3_1_0_,
+        depo0_.city as city4_1_0_,
+        depo0_.create_at as create_a5_1_0_,
+        depo0_.state as state6_1_0_,
+        depo0_.status as status7_1_0_,
+        depo0_.title as title8_1_0_,
+        depo0_.update_at as update_a9_1_0_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.id=?
+2023-05-09 21:32:54,045 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    select
+        category0_.id as id1_0_0_,
+        category0_.built_in as built_in2_0_0_,
+        category0_.create_at as create_a3_0_0_,
+        category0_.status as status4_0_0_,
+        category0_.title as title5_0_0_,
+        category0_.update_at as update_a6_0_0_ 
+    from
+        tbl_category category0_ 
+    where
+        category0_.id=?
+2023-05-09 21:32:54,049 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    insert 
+    into
+        tbl_product
+        (built_in, category_id, create_at, status, stock_alarm_limit, stock_amount, title, update_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2023-05-09 21:32:54,051 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=? 
+    where
+        id=?
+2023-05-09 21:32:54,056 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL:
+    insert 
+    into
+        tbl_transaction
+        (category_id, create_at, transaction) 
+    values
+        (?, ?, ?)
+2023-05-09 21:33:01,369 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        user0_.id as id1_5_0_,
+        role2_.id as id1_3_1_,
+        user0_.built_in as built_in2_5_0_,
+        user0_.create_at as create_a3_5_0_,
+        user0_.email as email4_5_0_,
+        user0_.first_name as first_na5_5_0_,
+        user0_.last_name as last_nam6_5_0_,
+        user0_.password as password7_5_0_,
+        user0_.phone as phone8_5_0_,
+        user0_.status as status9_5_0_,
+        user0_.update_at as update_10_5_0_,
+        role2_.type as type2_3_1_,
+        roles1_.user_id as user_id1_6_0__,
+        roles1_.role_id as role_id2_6_0__ 
+    from
+        tbl_user user0_ 
+    left outer join
+        tbl_user_role roles1_ 
+            on user0_.id=roles1_.user_id 
+    left outer join
+        tbl_role role2_ 
+            on roles1_.role_id=role2_.id 
+    where
+        user0_.email=?
+2023-05-09 21:33:01,372 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        product0_.id as id1_2_0_,
+        category1_.id as id1_0_1_,
+        product0_.built_in as built_in2_2_0_,
+        product0_.category_id as category9_2_0_,
+        product0_.create_at as create_a3_2_0_,
+        product0_.status as status4_2_0_,
+        product0_.stock_alarm_limit as stock_al5_2_0_,
+        product0_.stock_amount as stock_am6_2_0_,
+        product0_.title as title7_2_0_,
+        product0_.update_at as update_a8_2_0_,
+        category1_.built_in as built_in2_0_1_,
+        category1_.create_at as create_a3_0_1_,
+        category1_.status as status4_0_1_,
+        category1_.title as title5_0_1_,
+        category1_.update_at as update_a6_0_1_ 
+    from
+        tbl_product product0_ 
+    left outer join
+        tbl_category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2023-05-09 21:33:01,375 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    select
+        depo0_.product_id as product10_1_0_,
+        depo0_.id as id1_1_0_,
+        depo0_.id as id1_1_1_,
+        depo0_.address as address2_1_1_,
+        depo0_.built_in as built_in3_1_1_,
+        depo0_.city as city4_1_1_,
+        depo0_.create_at as create_a5_1_1_,
+        depo0_.state as state6_1_1_,
+        depo0_.status as status7_1_1_,
+        depo0_.title as title8_1_1_,
+        depo0_.update_at as update_a9_1_1_ 
+    from
+        tbl_depo depo0_ 
+    where
+        depo0_.product_id=?
+2023-05-09 21:33:01,377 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    update
+        tbl_depo 
+    set
+        product_id=null 
+    where
+        product_id=?
+2023-05-09 21:33:01,378 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL:
+    delete 
+    from
+        tbl_product 
+    where
+        id=?
+2023-05-09 21:33:36,809 INFO  [RMI TCP Connection(14)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
+2023-05-09 21:33:36,810 DEBUG [RMI TCP Connection(14)-127.0.0.1] org.springframework.boot.availability.ApplicationAvailabilityBean:Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-05-09 21:33:36,810 DEBUG [RMI TCP Connection(14)-127.0.0.1] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2dc4e07d, started on Tue May 09 21:32:47 TRT 2023
