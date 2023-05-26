@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.depo.requestDTO.ProductRequestDTO;
 import com.depo.responseDTO.ProductResponseDTO;
-import com.depo.service.ProductService;
+import com.depo.service.ProductServiceImpl;
 
 @RestController
 @RequestMapping("product")
 public class ProductController {
 
 	@Autowired
-	private ProductService productService;
+	private ProductServiceImpl productService;
 
 	// CREATE PRODUCT
 	@PostMapping("/create")

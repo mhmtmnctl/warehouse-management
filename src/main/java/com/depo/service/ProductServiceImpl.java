@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -26,7 +24,7 @@ import com.depo.requestDTO.ProductRequestDTO;
 import com.depo.responseDTO.ProductResponseDTO;
 
 @Service
-public class ProductService {
+public class ProductServiceImpl implements IProductService{
 
 	@Autowired
 	private ProductMapper productMapper;
@@ -44,12 +42,14 @@ public class ProductService {
 	private TransactionRepository transactionRepository;
 
 	// CREATE PRODUCT
+	@Override
 	public ProductResponseDTO createProduct(ProductRequestDTO productRequestDTO) {
 
 		return getProductResponseDTO(productRequestDTO);
 	}
 
 	// GET PRODUCT
+	@Override
 	public ProductResponseDTO getProduct(Long productId) {
 
 		Product product = getProductMethod(productId);
@@ -60,7 +60,8 @@ public class ProductService {
 	}
 
 	// UPDATE PRODUCT
-	public ProductResponseDTO updateProduct(@Valid ProductRequestDTO productRequestDTO, Long productId) {
+	@Override
+	public ProductResponseDTO updateProduct( ProductRequestDTO productRequestDTO, Long productId) {
 
 		Product product = getProductMethod(productId);
 
@@ -102,6 +103,7 @@ public class ProductService {
 	}
 	
 	//DELETE PRODUCT
+	@Override
 		public ProductResponseDTO deleteProduct(Long productId) {
 
 			Product product = productRepository.findByIdWithCategories(productId);
@@ -119,6 +121,7 @@ public class ProductService {
 		}
 
 	// Product to ProductResponseDTO Method
+	@Override
 	public ProductResponseDTO getProductResponseDTO(ProductRequestDTO productRequestDTO) {
 
 		List<Long> depoIdList = productRequestDTO.getDepoIds();
@@ -157,6 +160,7 @@ public class ProductService {
 	}
 
 	// Get Product Method
+	@Override
 	public Product getProductMethod(Long productId) {
 
 		Product product = productRepository.findById(productId)
@@ -166,6 +170,7 @@ public class ProductService {
 	}
 
 	// ProductTOProductResponseDTO method
+	@Override
 	public ProductResponseDTO getProductResponseDTO(Product product) {
 
 		List<String> depoCities = new ArrayList<>();
