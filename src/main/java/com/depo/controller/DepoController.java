@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.depo.requestDTO.DepoRequestDTO;
 import com.depo.responseDTO.DepoResponseDTO;
-import com.depo.service.DepoService;
+import com.depo.service.DepoServiceImpl;
 
 @RestController
 @RequestMapping("/warehouse")
 public class DepoController {
 
 	@Autowired
-	private DepoService depoService;
+	private DepoServiceImpl depoService;
 
 	// CREATE WAREHOUSE
 	@PostMapping("/create")
