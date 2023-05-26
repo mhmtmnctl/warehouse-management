@@ -31,14 +31,14 @@ public class UserService {
 	private UserRepository userRepository;
 
 	@Autowired
-	private RoleService roleService;
+	private RoleServiceImpl roleService;
 
 	private PasswordEncoder passwordEncoder;
 
 	@Autowired
 	private UserMapper userMapper;
 
-	public UserService(UserRepository userRepository, RoleService roleService, @Lazy PasswordEncoder passwordEncoder,
+	public UserService(UserRepository userRepository, RoleServiceImpl roleService, @Lazy PasswordEncoder passwordEncoder,
 			UserMapper userMapper) {
 
 		this.userRepository = userRepository;

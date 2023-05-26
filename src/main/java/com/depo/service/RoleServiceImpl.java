@@ -10,17 +10,16 @@ import com.depo.exception.message.ErrorMessage;
 import com.depo.repository.RoleRepository;
 
 @Service
-public class RoleService {
+public class RoleServiceImpl implements IRoleService {
 
 	@Autowired
 	private RoleRepository roleRepository;
-
+	
+	@Override
 	public Role findByType(RoleType roleType) {
-		
-		
-		return roleRepository.findByType(roleType).orElseThrow(() -> new ResourceNotFoundException(
-				ErrorMessage.ROLE_NOT_FOUND_MESSAGE));
-	}
 
+		return roleRepository.findByType(roleType)
+				.orElseThrow(() -> new ResourceNotFoundException(ErrorMessage.ROLE_NOT_FOUND_MESSAGE));
+	}
 
 }
