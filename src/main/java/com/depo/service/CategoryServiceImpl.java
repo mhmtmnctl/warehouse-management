@@ -16,7 +16,7 @@ import com.depo.requestDTO.CategoryRequestDTO;
 import com.depo.responseDTO.CategoryResponseDTO;
 
 @Service
-public class CategoryService {
+public class CategoryServiceImpl implements ICategoryService {
 
 	@Autowired
 	private CategoryRepository categoryRepository;
@@ -25,6 +25,7 @@ public class CategoryService {
 	private CategoryMapper categoryMapper;
 
 	// CREATE CATEGORY
+	@Override
 	public CategoryResponseDTO createCategory(CategoryRequestDTO categoryRequestDTO) {
 
 		Category category = categoryMapper.categoryRequsetDTOToCategory(categoryRequestDTO);
@@ -36,6 +37,7 @@ public class CategoryService {
 	}
 
 	// GET CATEGORY
+	@Override
 	public CategoryResponseDTO getCategory(Long categoryId) {
 
 		Category category = getCategoryMethod(categoryId);
@@ -46,6 +48,7 @@ public class CategoryService {
 	}
 
 	// UPDATE CATEGORY
+	@Override
 	public CategoryResponseDTO updateCategory(Long categoryId, CategoryRequestDTO categoryRequestDTO) {
 
 		Category category = getCategoryMethod(categoryId);
@@ -67,9 +70,8 @@ public class CategoryService {
 		return categoryResponseDTO;
 	}
 
-	
-
 	// DELETE CATEGORY
+	@Override
 	public CategoryResponseDTO deleteCategory(Long categoryId) {
 
 		Category category = getCategoryMethod(categoryId);
@@ -85,14 +87,15 @@ public class CategoryService {
 
 		return categoryResponseDTO;
 	}
-	
+
 	// Find Category Method
-		public Category getCategoryMethod(Long categoryId) {
+	@Override
+	public Category getCategoryMethod(Long categoryId) {
 
-			Category category = categoryRepository.findById(categoryId)
-					.orElseThrow(() -> new ResourceNotFoundException(ErrorMessage.CATEGORY_NOT_FOUND_MESSAGE));
-			return category;
+		Category category = categoryRepository.findById(categoryId)
+				.orElseThrow(() -> new ResourceNotFoundException(ErrorMessage.CATEGORY_NOT_FOUND_MESSAGE));
+		return category;
 
-		}
+	}
 
 }

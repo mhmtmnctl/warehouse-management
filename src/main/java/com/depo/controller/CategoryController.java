@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.depo.requestDTO.CategoryRequestDTO;
 import com.depo.responseDTO.CategoryResponseDTO;
-import com.depo.service.CategoryService;
+import com.depo.service.CategoryServiceImpl;
 
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
 
 	@Autowired
-	private CategoryService categoryService;
+	private CategoryServiceImpl categoryService;
 
 	// CREATE CATEGORY
 	@PostMapping("/create")
