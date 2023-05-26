@@ -14,6 +14,7 @@ import com.depo.mapper.DepoMapper;
 import com.depo.repository.DepoRepository;
 import com.depo.requestDTO.DepoRequestDTO;
 import com.depo.responseDTO.DepoResponseDTO;
+import com.depo.service.ServiceInterfaces.IDepoService;
 
 @Service
 public class DepoServiceImpl implements IDepoService {

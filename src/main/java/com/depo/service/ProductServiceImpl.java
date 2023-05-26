@@ -22,6 +22,7 @@ import com.depo.repository.ProductRepository;
 import com.depo.repository.TransactionRepository;
 import com.depo.requestDTO.ProductRequestDTO;
 import com.depo.responseDTO.ProductResponseDTO;
+import com.depo.service.ServiceInterfaces.IProductService;
 
 @Service
 public class ProductServiceImpl implements IProductService{

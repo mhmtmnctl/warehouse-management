@@ -1,4 +1,4 @@
-package com.depo.service;
+package com.depo.service.ServiceInterfaces;
 
 import com.depo.domain.Depo;
 import com.depo.requestDTO.DepoRequestDTO;

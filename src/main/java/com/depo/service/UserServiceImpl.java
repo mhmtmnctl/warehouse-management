@@ -19,6 +19,7 @@ import com.depo.repository.UserRepository;
 import com.depo.requestDTO.UserRequestDTO;
 import com.depo.responseDTO.UserResponseDTO;
 import com.depo.security.SecurityUtils;
+import com.depo.service.ServiceInterfaces.IUserService;
 
 
 @Service

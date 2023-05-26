@@ -8,6 +8,7 @@ import com.depo.enums.RoleType;
 import com.depo.exception.ResourceNotFoundException;
 import com.depo.exception.message.ErrorMessage;
 import com.depo.repository.RoleRepository;
+import com.depo.service.ServiceInterfaces.IRoleService;
 
 @Service
 public class RoleServiceImpl implements IRoleService {

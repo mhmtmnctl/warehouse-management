@@ -14,6 +14,7 @@ import com.depo.mapper.CategoryMapper;
 import com.depo.repository.CategoryRepository;
 import com.depo.requestDTO.CategoryRequestDTO;
 import com.depo.responseDTO.CategoryResponseDTO;
+import com.depo.service.ServiceInterfaces.ICategoryService;
 
 @Service
 public class CategoryServiceImpl implements ICategoryService {
