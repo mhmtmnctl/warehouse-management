@@ -33,7 +33,7 @@ public class UserResponseDTO {
 
 	private LocalDate update_at;
 	
-	private Boolean built_in;
+	private Boolean builtIn;
 		
 	private Set<String> roles;
 	

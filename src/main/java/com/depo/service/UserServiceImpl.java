@@ -81,7 +81,7 @@ public class UserServiceImpl implements IUserService {
 		user.setStatus((byte) 0);
 		user.setCreate_at(LocalDate.now());
 		user.setRoles(roles);
-		user.setBuilt_in(false);
+		user.setBuiltIn(false);
 		user.setPassword(encodedPassword);
 		userRepository.save(user);
 
@@ -108,7 +108,7 @@ public class UserServiceImpl implements IUserService {
 
 		User user = getCurrentUser();
 		
-		if (user.getBuilt_in()) {
+		if (user.getBuiltIn()) {
 			throw new BuiltInException(ErrorMessage.BUILTIN_MESSAGE);
 		}
 			user.setEmail(userRequestDTO.getEmail());
@@ -130,7 +130,7 @@ public class UserServiceImpl implements IUserService {
 	public void deleteAuthUserById() {
 		User user = getCurrentUser();
 
-		if (user.getBuilt_in()) {
+		if (user.getBuiltIn()) {
 			throw new BuiltInException(ErrorMessage.BUILTIN_MESSAGE);
 		}
 

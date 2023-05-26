@@ -1,14 +1,8 @@
 package com.depo.domain;
 
-import java.time.LocalDate;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -24,11 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "tbl_product")
-public class Product {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+public class Product extends BaseEntity{
 
 	@Column
 	private String title;
@@ -38,18 +28,6 @@ public class Product {
 
 	@Column
 	private Integer stock_alarm_limit;
-
-	@Column
-	private byte status = 0;
-
-	@Column
-	private Boolean builtIn = false;
-
-	@Column
-	private LocalDate create_at;
-
-	@Column
-	private LocalDate update_at;
 
 	@ManyToOne
 	@JoinColumn(name = "category_id")

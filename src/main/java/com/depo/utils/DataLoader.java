@@ -66,7 +66,7 @@ public class DataLoader implements ApplicationRunner {
 		admin.setStatus((byte) 1);
 		admin.setCreate_at(LocalDate.now());		
 		admin.setRoles(roles1);
-		admin.setBuilt_in(true);
+		admin.setBuiltIn(true);
 		String encodedPassword = passwordEncoder.encode("12345");
 		admin.setPassword(encodedPassword);
 
@@ -86,7 +86,7 @@ public class DataLoader implements ApplicationRunner {
 		customer.setStatus((byte) 1);
 		customer.setCreate_at(LocalDate.now());
 		customer.setRoles(roles2);
-		customer.setBuilt_in(false);
+		customer.setBuiltIn(false);
 		String encodedPassword2 = passwordEncoder.encode("12345");
 		customer.setPassword(encodedPassword2);
 

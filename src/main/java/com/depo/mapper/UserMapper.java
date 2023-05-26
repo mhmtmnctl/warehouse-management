@@ -18,7 +18,7 @@ public interface UserMapper {
 	@Mapping(target="create_at", ignore=true)
 	@Mapping(target="update_at", ignore=true)
 	@Mapping(target="id", ignore=true)
-	@Mapping(target="built_in", ignore=true)
+	@Mapping(target="builtIn", ignore=true)
 	@Mapping(target="roles", ignore=true)	
 	User userRequestDTOToUser(UserRequestDTO userRequestDTO);
 	
