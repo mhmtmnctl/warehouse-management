@@ -7,13 +7,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.depo.domain.User;
-import com.depo.service.UserService;
+import com.depo.service.UserServiceImpl;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceImpl userService;
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		User user = userService.getUserByEmail(email);

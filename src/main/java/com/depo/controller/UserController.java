@@ -22,7 +22,7 @@ import com.depo.requestDTO.UserRequestDTO;
 import com.depo.responseDTO.LoginResponseDTO;
 import com.depo.responseDTO.UserResponseDTO;
 import com.depo.security.jwt.JwtUtils;
-import com.depo.service.UserService;
+import com.depo.service.UserServiceImpl;
 
 
 
@@ -32,7 +32,7 @@ import com.depo.service.UserService;
 public class UserController {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceImpl userService;
 
 	@Autowired
 	private AuthenticationManager authenticationManager;

@@ -1,15 +1,12 @@
 package com.depo.service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import com.depo.domain.Role;
 import com.depo.domain.User;
 import com.depo.enums.RoleType;
@@ -25,7 +22,7 @@ import com.depo.security.SecurityUtils;
 
 
 @Service
-public class UserService {
+public class UserServiceImpl implements IUserService {
 
 	@Autowired
 	private UserRepository userRepository;
@@ -38,7 +35,7 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 
-	public UserService(UserRepository userRepository, RoleServiceImpl roleService, @Lazy PasswordEncoder passwordEncoder,
+	public UserServiceImpl(UserRepository userRepository, RoleServiceImpl roleService, @Lazy PasswordEncoder passwordEncoder,
 			UserMapper userMapper) {
 
 		this.userRepository = userRepository;
@@ -47,7 +44,7 @@ public class UserService {
 		this.userMapper = userMapper;
 
 	}
-
+	@Override
 	public User getCurrentUser() {
 
 		String email = SecurityUtils.getCurrentUserLogin()
@@ -56,7 +53,7 @@ public class UserService {
 		return user;
 
 	}
-
+	@Override
 	public User getUserByEmail(String email) {
 
 		User user = userRepository.findByEmail(email)
@@ -65,6 +62,7 @@ public class UserService {
 	}
 
 	// ============= Register User============================
+	@Override
 	public UserResponseDTO saveUser(UserRequestDTO registerRequest) {
 
 		if (userRepository.existsByEmail(registerRequest.getEmail())) {
@@ -93,6 +91,7 @@ public class UserService {
 	}
 
 	// ========= GET USER BY ID - ADMIN ======================
+	@Override
 	public UserResponseDTO getUserByIdAdmin(Long userId) {
 		User user = userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException(ErrorMessage.USER_NOT_FOUND_MESSAGE));
@@ -103,6 +102,7 @@ public class UserService {
 	}
 
 	// ========= UPDATE AUTH USER ======================
+	@Override
 	public UserResponseDTO updateAuthUser(UserRequestDTO userRequestDTO) {
 
 		User user = getCurrentUser();
@@ -125,6 +125,7 @@ public class UserService {
 	}
 
 	// ========= DELETE USER ID AUTH ======================
+	@Override
 	public void deleteAuthUserById() {
 		User user = getCurrentUser();
 
