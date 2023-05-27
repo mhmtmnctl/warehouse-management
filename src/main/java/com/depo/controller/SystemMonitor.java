@@ -83,7 +83,7 @@ public class SystemMonitor {
 	public Map<String, Object> getRuntimeInfo() {
 		Map<String, Object> runtimeInfo = new HashMap<>();
 
-		// JVM çalışma zamanı bilgileri
+		// JVM çalışma zamanı bilgisi
 		RuntimeMXBean runtimeMxBean = ManagementFactory.getRuntimeMXBean();
 
 		// JVM argümanları
