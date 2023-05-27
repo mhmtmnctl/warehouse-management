@@ -5,10 +5,8 @@ server:
     include-binding-errors: always
     include-message: always
     include-stacktrace: never
-spring:
-  
-
-  datasource:
+spring:   
+  datasource: 
     url: jdbc:postgresql://localhost:5432/warehouse
     username: warehouseUser
     password: 12345
@@ -34,10 +32,11 @@ logging:
     root: off
 
 management: #actuator
-  endpoints:
+  endpoints:   
     web:
       exposure:
         include: '*'
+                  
   info:
     env:
       enabled: true
@@ -59,6 +58,7 @@ info:
     version: '@project.version@'
   
       
+
 
   
    

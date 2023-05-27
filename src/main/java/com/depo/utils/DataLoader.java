@@ -23,13 +23,13 @@ public class DataLoader implements ApplicationRunner {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	private PasswordEncoder passwordEncoder;
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 
-		//loadData();
+		// loadData();
 	}
 
 	public DataLoader(@Lazy PasswordEncoder passwordEncoder) {
@@ -45,35 +45,32 @@ public class DataLoader implements ApplicationRunner {
 		role1.setId(1);
 		role1.setType(RoleType.ROLE_ADMIN);
 		roleRepository.save(role1);
-	
 
 		Role role2 = new Role();
 		role2.setId(2);
 		role2.setType(RoleType.ROLE_CUSTOMER);
 		roleRepository.save(role2);
 
-
-
 		User admin = new User();
 
 		Set<Role> roles1 = new HashSet<>();
 		roles1.add(role1);
-		
+
 		admin.setFirst_name("Admin");
 		admin.setLast_name("Admin");
-		admin.setPhone("555-555-5555");		
+		admin.setPhone("555-555-5555");
 		admin.setEmail("admin@warehouse.com");
 		admin.setStatus((byte) 1);
-		admin.setCreate_at(LocalDate.now());		
+		admin.setCreate_at(LocalDate.now());
 		admin.setRoles(roles1);
 		admin.setBuiltIn(true);
 		String encodedPassword = passwordEncoder.encode("12345");
 		admin.setPassword(encodedPassword);
 
 		userRepository.save(admin);
-		
+
 		///////////////////////////////
-		
+
 		User customer = new User();
 
 		Set<Role> roles2 = new HashSet<>();
@@ -81,7 +78,7 @@ public class DataLoader implements ApplicationRunner {
 
 		customer.setFirst_name("Customer");
 		customer.setLast_name("customer");
-		customer.setPhone("555-555-5555");		
+		customer.setPhone("555-555-5555");
 		customer.setEmail("customer@warehouse.com");
 		customer.setStatus((byte) 1);
 		customer.setCreate_at(LocalDate.now());

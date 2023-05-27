@@ -35,8 +35,11 @@ public class SecurityConfig {
 				authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll().and().authorizeRequests()
 				.antMatchers("/user/login",
 						     "/user/register",
-						     "/actuator/info",
-						     "/actuator/health")
+						     "/info",
+						     "/health",
+						     "/metrics",
+						     "/beans",
+						     "/runtime-info")
 				.permitAll().anyRequest().authenticated();
 		http.addFilterBefore(authTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 		return http.build();

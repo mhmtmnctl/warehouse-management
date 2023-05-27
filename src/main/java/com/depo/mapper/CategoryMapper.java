@@ -16,6 +16,7 @@ public interface CategoryMapper {
 	@Mapping(target="create_at", ignore=true)
 	@Mapping(target="update_at", ignore=true)
 	@Mapping(target="id", ignore=true)
+	@Mapping(target="products", ignore=true)
 	Category categoryRequsetDTOToCategory(CategoryRequestDTO categoryRequestDTO );
 	
 	CategoryResponseDTO categoryToCategoryResponseDTO(Category category);
