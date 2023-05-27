@@ -2,7 +2,6 @@ package com.depo.controller;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.Status;
 import org.springframework.context.ApplicationContext;
-import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,8 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SystemMonitor {
 
-	@Autowired
-	private Environment environment;
+	
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
