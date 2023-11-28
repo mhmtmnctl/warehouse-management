@@ -25,7 +25,7 @@ public class Product extends BaseEntity{
 
 	@Column
 	private Integer stock_amount;
-
+	
 	@Column
 	private Integer stock_alarm_limit;
 
