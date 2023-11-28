@@ -7,9 +7,9 @@ server:
     include-stacktrace: never
 spring:   
   datasource: 
-    url: jdbc:mysql://94.73.151.40/u1477110_shipstation
+    url: jdbc:mysql://94.73.151.40:3306/u1477110_shipstation
     username: u1477110_ship
-    password: Uo[&e6AyNz]c
+    password: SHip951951951**
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
