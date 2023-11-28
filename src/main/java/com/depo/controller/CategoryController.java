@@ -23,7 +23,7 @@ public class CategoryController {
 	@Autowired
 	private CategoryServiceImpl categoryService;
 
-	// CREATE CATEGORY
+	// CREATE CATEGORY//
 	@PostMapping("/create")
 	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<CategoryResponseDTO> createCategory(
